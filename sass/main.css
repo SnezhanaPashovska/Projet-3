@@ -1,0 +1,15 @@
+.header {
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 30px; }
+
+#logo img {
+  object-fit: cover;
+  width: 40%; }
+
+#logo {
+  border: 1px solid black; }
+
+/*# sourceMappingURL=main.css.map */

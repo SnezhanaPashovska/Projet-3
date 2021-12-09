@@ -1,3 +1,25 @@
+.header {
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 30px;
+  border-bottom: 1px solid #717073; }
 
+#logo img {
+  display: block;
+  margin: 25px auto 20px auto;
+  object-fit: cover;
+  width: 60%; }
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 10px auto 20px auto;
+  padding: 20px 50px 20px 30px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 18px; }
 
 /*# sourceMappingURL=style.css.map */
