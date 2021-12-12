@@ -1,6 +1,7 @@
 @import "./tools/variables";
 @import "./tools/functions";
 @import "./tools/mixins";
+@import "./tools/images";
 
 .header{
   @include header;
@@ -23,6 +24,22 @@
 
 .list_1, .list_2, .list_3{
   @include lists;
+}
+
+.number{
+  @include numbers;
+}
+
+.container_2{
+  @include container_2;
+}
+
+.frame{
+  @include frame;
+}
+
+.frame_text{
+  @include frame_text;
 }
 
 
