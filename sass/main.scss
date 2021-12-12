@@ -21,5 +21,9 @@
   @include container_1;
 }
 
+.list_1, .list_2, .list_3{
+  @include lists;
+}
+
 
 
