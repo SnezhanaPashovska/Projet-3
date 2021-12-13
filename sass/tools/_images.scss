@@ -1,31 +1,29 @@
 @mixin container_2 {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   font-family: Roboto, sans-serif;
-  justify-content: space-between;
+  
   font-weight: 600;
   font-size: 14px;
   background-color: $headline-background;
   width: 100%;
-  height: 900px;
+  height: 950px;
 
   &__title{
-    padding: 30px 0px 0px 30px;
+    padding: 20px 0px 0px 30px;
   }
 
 }
 
 @mixin frame{
-  border: 1px solid black;
-  width: 80%;
-  height: 170px;
+  width: 85%;
+  height: 190px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
-  margin: 0px auto 0px auto;
+  justify-content: space-between;
+  margin: 20px auto 5px auto;
   font-size: 12px;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 5px 5px 5px $color-border;
@@ -34,7 +32,7 @@
   & img{
     object-fit: cover;
     width: 100%;
-    height: 130px;
+    height: 140px;
     border-radius: 10px 10px 0px 0px;
   }
 
@@ -51,8 +49,47 @@
   &__badge{
     background-color: $color-tertiary;
     border: 1px solid $color-tertiary;
-    width: 30%;
-    padding-left: 6px;
+    width: 25%;
+    padding: 5px 0px 5px 18px;
+    position: absolute;
+    right: 16px;
+    margin-top: -120px;
+    margin-right: 20px;
+    font-weight: 600;
+    color: $color-badge;
+    
   }
   
+}
+@mixin description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: 12px;
+
+  & h3{
+    font-size: 16px;
+    width: 70%;
+    padding: 5px 0px 0px 6px;
+    color: black;
+    font-weight: 800;
+  }
+
+  & p{
+    font-size: 12px;
+    padding: 2px 0px 0px 6px;
+    color: black;
+  }
+}
+
+@mixin heart {
+  padding: 0px 0px 20px 230px;
+  font-size: 20px;
+  position: relative;
+  margin-top: -35px;
+  font-weight: 100;
+  
+  & heart i :hover{
+    @keyframe heart
+  }
 }

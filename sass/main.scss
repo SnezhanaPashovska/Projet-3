@@ -2,6 +2,8 @@
 @import "./tools/functions";
 @import "./tools/mixins";
 @import "./tools/images";
+@import "./tools/animations";
+@import"./tools/footer";
 
 .header{
   @include header;
@@ -40,6 +42,17 @@
 
 .frame_text{
   @include frame_text;
+}
+
+.description{
+  @include description;
+}
+
+.heart{
+  @include heart;
+}
+.footer{
+  @include footer;
 }
 
 
