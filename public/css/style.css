@@ -1,17 +1,21 @@
-@keyframes heart {
+@keyframes gradient {
   from {
     background-color: #9356DC; }
   to {
     background-color: #FF79DA; } }
 .header {
+  position: sticky;
+  top: 0;
+  background: white;
+  height: 65px;
+  box-shadow: 0 2px 4px #636363cc;
   display: flex;
-  position: relative;
-  width: 80%;
-  height: 20px;
-  box-shadow: 0px 0px 5px 0px #d3d3d3; }
+  justify-content: center;
+  align-items: center;
+  z-index: 2; }
 
 #logo img {
-  display: block;
+  display: flex;
   margin: 25px auto 10px auto;
   object-fit: cover;
   width: 45%; }
@@ -59,8 +63,10 @@
     border: 1px solid #f6f6f6;
     color: #fff;
     font-weight: bold;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
     box-shadow: 1px 1px 1px 1px #eaeaea; }
+    .headline__button:hover {
+      background: linear-gradient(to top left, #9356DC 1%, #FF79DA); }
 
 .container_1 {
   display: flex;
@@ -135,7 +141,7 @@
   margin: 20px auto 5px auto;
   font-size: 12px;
   border-radius: 10px 10px 10px 10px;
-  box-shadow: 5px 5px 5px #d3d3d3; }
+  box-shadow: 2px 2px 7px #d3d3d3; }
   .frame img {
     object-fit: cover;
     width: 100%;
@@ -165,13 +171,13 @@
   flex-direction: column;
   flex-wrap: nowrap;
   font-size: 12px; }
-  .description h3 {
+  .description__food {
     font-size: 16px;
     width: 70%;
     padding: 5px 0px 0px 6px;
     color: black;
-    font-weight: 800; }
-  .description p {
+    font-weight: bold; }
+  .description__place {
     font-size: 12px;
     padding: 2px 0px 0px 6px;
     color: black; }
@@ -181,9 +187,16 @@
   font-size: 20px;
   position: relative;
   margin-top: -35px;
-  font-weight: 100; }
-  .heart heart i :hover {
-    @keyframe heart; }
+  font-weight: 100;
+  color: black;
+  -webkit-background-clip: text; }
+  .heart .far:hover, .heart .fa:hover, .heart .far:active, .heart .fa:active {
+    color: transparent;
+    font-weight: 900;
+    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 1s; }
 
 .footer {
   display: flex;
@@ -199,7 +212,7 @@
     -webkit-filter: invert(100%); }
     .footer__logo img {
       object-fit: cover;
-      width: 30%;
+      width: 40%;
       padding: 20px 0px 10px 5px; }
   .footer__list {
     display: flex;
@@ -208,14 +221,16 @@
     margin-top: 10px;
     height: 130px;
     cursor: pointer; }
-    .footer__list li {
-      display: inline;
-      justify-content: space-between; }
-      .footer__list li i {
-        padding-right: 6px; }
-      .footer__list li a {
-        color: white; }
-        .footer__list li a:hover {
-          color: #9356DC; }
+  .footer li {
+    display: inline-block;
+    justify-content: space-between; }
+    .footer li:hover {
+      text-decoration: underline; }
+    .footer li i {
+      padding-right: 7px; }
+    .footer li .fa-utensils {
+      padding-right: 12px; }
+    .footer li a {
+      color: white; }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,7 +26,7 @@
   margin: 20px auto 5px auto;
   font-size: 12px;
   border-radius: 10px 10px 10px 10px;
-  box-shadow: 5px 5px 5px $color-border;
+  box-shadow: 2px 2px 7px $color-border;
 
 
   & img{
@@ -67,15 +67,15 @@
   flex-wrap: nowrap;
   font-size: 12px;
 
-  & h3{
+  &__food{
     font-size: 16px;
     width: 70%;
     padding: 5px 0px 0px 6px;
     color: black;
-    font-weight: 800;
+    font-weight: bold;
   }
 
-  & p{
+  &__place{
     font-size: 12px;
     padding: 2px 0px 0px 6px;
     color: black;
@@ -88,8 +88,19 @@
   position: relative;
   margin-top: -35px;
   font-weight: 100;
-  
-  & heart i :hover{
-    @keyframe heart
-  }
+  color: black;   
+  -webkit-background-clip: text;
+   .far:hover, .fa:hover, .far:active, .fa:active{
+     color: transparent;
+     font-weight: 900;
+     background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+     background-clip: text;
+     -webkit-background-clip: text;
+     transition: all 1s;
+   }
 }
+
+
+
+
+
