@@ -1,8 +1,3 @@
-@keyframes gradient {
-  from {
-    background-color: #9356DC; }
-  to {
-    background-color: #FF79DA; } }
 .header {
   position: sticky;
   top: 0;
@@ -64,9 +59,11 @@
     color: #fff;
     font-weight: bold;
     background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
-    box-shadow: 1px 1px 1px 1px #eaeaea; }
+    box-shadow: 2px 3px 7px #eaeaea; }
     .headline__button:hover {
-      background: linear-gradient(to top left, #9356DC 1%, #FF79DA); }
+      background: linear-gradient(to top left, #9356DC 1%, #FF79DA);
+      box-shadow: 4px 3px 7px #7e7e7e;
+      border: 1px solid #7e7e7e; }
 
 .container_1 {
   display: flex;
@@ -77,7 +74,7 @@
   height: 350px; }
   .container_1__title {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: bold;
     padding: 30px 20px 10px 15px; }
   .container_1__list {
     display: flex;
