@@ -1,0 +1,20 @@
+@mixin header {
+  position: sticky;
+  top: 0;
+  background: white;
+  height: 65px;
+  box-shadow: 0 2px 4px #636363cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+
+@mixin logoimg {
+  display: flex;
+  margin: 25px auto 10px auto;
+  object-fit: cover;
+  width: 45%;
+  
+}

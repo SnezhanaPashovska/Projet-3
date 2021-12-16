@@ -1,9 +1,13 @@
 @import "./tools/variables";
 @import "./tools/functions";
 @import "./tools/mixins";
+@import"./tools/header";
+@import"./tools/headline";
+@import"./tools/buttons";
 @import "./tools/images";
 @import "./tools/animations";
 @import"./tools/footer";
+
 
 .header{
   @include header;
@@ -17,7 +21,7 @@
 }
 
 .headline{
-  @include headline;
+  @include headline; 
 }
 
 .container_1{

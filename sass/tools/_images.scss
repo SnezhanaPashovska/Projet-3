@@ -70,14 +70,14 @@
   &__food{
     font-size: 16px;
     width: 70%;
-    padding: 5px 0px 0px 6px;
+    padding: 2px 0px 0px 10px;
     color: black;
     font-weight: bold;
   }
 
   &__place{
     font-size: 12px;
-    padding: 2px 0px 0px 6px;
+    padding: 2px 0px 7px 10px;
     color: black;
   }
 }
@@ -85,8 +85,8 @@
 @mixin heart {
   padding: 0px 0px 20px 230px;
   font-size: 20px;
-  position: relative;
-  margin-top: -35px;
+  position: absolute;
+  margin-top: 0px;
   font-weight: 100;
   color: black;   
   -webkit-background-clip: text;
@@ -96,7 +96,7 @@
      background-image: linear-gradient(to top left, $color-primary, $color-secondary);
      background-clip: text;
      -webkit-background-clip: text;
-     transition: all 1s;
+     transition: all 10ms;
    }
 }
 
