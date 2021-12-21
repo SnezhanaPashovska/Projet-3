@@ -7,6 +7,7 @@
 @import "./tools/images";
 @import "./tools/animations";
 @import"./tools/footer";
+@import"./tools/loader";
 
 
 .header{
@@ -59,6 +60,32 @@
 .footer{
   @include footer;
 }
+
+.body{
+  @include body;
+}
+
+.loader{
+  @include loader;
+}
+
+.circle{
+  @include circle;
+}
+.circle:nth-child(1){
+	left: -100px;
+	background: $color-secondary;
+  animation: slideleft 2s ease forwards infinite;
+}
+
+.circle:nth-child(2){
+	left: 100px;
+	top: -40px;
+	background: $color-tertiary;
+  animation: slideright 2s ease forwards infinite;
+}
+
+
 
 
 

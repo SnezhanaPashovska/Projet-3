@@ -1,0 +1,22 @@
+@mixin body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+@mixin loader {
+  background: $color-primary;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+  margin: auto;
+	animation: rotate 2s ease forwards infinite;
+}
+
+@mixin circle {
+  background: $color-secondary;
+	width: 40px;
+  height: 40px;
+	border-radius: 50%;
+	position: relative;
+}

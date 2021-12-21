@@ -1,3 +1,39 @@
+@keyframes rotate {
+  0% {
+    background: #9356DC;
+    transform: rotate(0deg); }
+  50% {
+    background: #FF79DA;
+    transform: rotate(0deg); }
+  100% {
+    background: #98e2cf;
+    transform: rotate(360deg); } }
+@keyframes slideleft {
+  0% {
+    background: #FF79DA;
+    transform: translateX(0px); }
+  25% {
+    background: #FF79DA;
+    transform: translateX(-100px); }
+  50% {
+    background: #98e2cf;
+    transform: translateX(0px); }
+  100% {
+    background: #98e2cf;
+    transform: translateX(); } }
+@keyframes slideright {
+  0% {
+    background: #FF79DA;
+    transform: translateX(0px); }
+  25% {
+    background: #FF79DA;
+    transform: translateX(100px); }
+  50% {
+    background: #98e2cf;
+    transform: translateX(0px); }
+  100% {
+    background: #98e2cf;
+    transform: translateX(); } }
 .header {
   position: sticky;
   top: 0;
@@ -231,5 +267,37 @@
       padding-right: 12px; }
     .footer li a {
       color: white; }
+
+.body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+
+.loader {
+  background: #9356DC;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: auto;
+  animation: rotate 2s ease forwards infinite; }
+
+.circle {
+  background: #FF79DA;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative; }
+
+.circle:nth-child(1) {
+  left: -100px;
+  background: #FF79DA;
+  animation: slideleft 2s ease forwards infinite; }
+
+.circle:nth-child(2) {
+  left: 100px;
+  top: -40px;
+  background: #98e2cf;
+  animation: slideright 2s ease forwards infinite; }
 
 /*# sourceMappingURL=style.css.map */
