@@ -59,3 +59,29 @@
   }
 }
 
+@keyframes preloader{
+  0%{
+    background-color: white;
+    opacity: 1;
+  }
+
+  25%{
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  50%{
+    background-color: white;
+    opacity: 0.5;
+  }
+
+  85%{
+    background-color: white;
+    opacity: 0.3;
+  }
+  100%{
+    background-color: white;
+    opacity: 0;
+  }
+}
+

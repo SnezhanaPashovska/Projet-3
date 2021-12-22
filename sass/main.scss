@@ -65,6 +65,9 @@
   @include body;
 }
 
+.pre-loader{
+  @include preloader;
+}
 .loader{
   @include loader;
 }

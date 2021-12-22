@@ -4,6 +4,20 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin preloader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  margin: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  animation: preloader 4s ease forwards;
+}
+
 @mixin loader {
   background: $color-primary;
 	width: 40px;

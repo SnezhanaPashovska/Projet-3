@@ -1,5 +1,0 @@
-@mixin lighter-button{
-  @if (lightness ($color-secondary) <25%){
-  $color-secondary: lighten($color-secondary,10%);
-  }
-}
