@@ -14,7 +14,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
   animation: preloader 4s ease forwards;
 }
 
@@ -25,6 +24,7 @@
 	border-radius: 50%;
   margin: auto;
 	animation: rotate 2s ease forwards infinite;
+ 
 }
 
 @mixin circle {

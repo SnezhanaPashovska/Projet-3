@@ -1,0 +1,73 @@
+@import "./tools/variables";
+@import "./tools/functions";
+@import "./tools/mixins";
+@import"./tools/header";
+@import"./tools/headline";
+@import"./tools/buttons";
+@import "./tools/images";
+@import "./tools/animations";
+@import"./tools/footer";
+@import"./tools/menu";
+
+.header__menu{
+  @include header_menu;
+}
+
+#logo img{
+  @include logoimg_menu;
+}
+
+.pic{
+  @include pic;
+}
+
+.main_menu{
+  @include menus;
+}
+
+.main_title{
+  @include menu_title;
+}
+
+.menu{
+  @include menu_box;
+   
+}
+
+.food{
+  @include food;
+  overflow: hidden;
+  &:hover i{
+    margin: -60px 0px 0px 235px;
+  }
+  .check{
+    @include checkmark;
+   
+  }
+}
+
+
+
+.food_type{
+  @include food_type;
+  animation: appear 1s ease-in-out;
+  animation-fill-mode: backwards;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}){
+      animation-delay: 100ms * $i;
+    }
+  }
+}
+
+
+.btn{
+  @include btn;
+}
+
+.price{
+  @include price;
+}
+
+.footer{
+  @include footer;
+}
