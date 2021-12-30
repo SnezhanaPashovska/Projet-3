@@ -37,22 +37,51 @@
 .food{
   @include food;
   overflow: hidden;
-  &:hover i{
-    margin: -60px 0px 0px 235px;
+  animation: appear 0.5s ease-in-out forwards;
+  animation-fill-mode: backwards;
+  @for $i from 1 through 3{
+    &:nth-child(#{$i}){
+      animation-delay: 80ms * $i;
+    }
   }
+  &:hover{
+    padding-right: 3rem;
+    overflow: x;
+    text-overflow: ellipsis;
+    
+  }
+  &:hover .price{
+    animation: slide 1s ease forwards;
+
+  }
+
+  &:hover .check{
+    overflow: hidden;
+    visibility: visible;
+    padding: -6px 0px 0px 239px;
+    transition: all 1s;
+    animation: slide-check 1s ease forwards;
+    text-overflow: ellipsis;
+  }
+    &:hover .check i{
+    animation: spin 0.5s ease-in;
+    }
+    .price{
+      @include price;
+    }
+  }
+  
+
   .check{
     @include checkmark;
    
   }
-}
-
-
 
 .food_type{
   @include food_type;
   animation: appear 1s ease-in-out;
   animation-fill-mode: backwards;
-  @for $i from 1 through 3 {
+  @for $i from 1 through 9 {
     &:nth-child(#{$i}){
       animation-delay: 100ms * $i;
     }
@@ -64,9 +93,7 @@
   @include btn;
 }
 
-.price{
-  @include price;
-}
+
 
 .footer{
   @include footer;

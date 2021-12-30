@@ -56,13 +56,21 @@
     transform: scale(0); }
   100% {
     transform: scale(1); } }
-@keyframes check {
+@keyframes spin {
   0% {
-    visibility: visible;
-    transform: translateX(50px); }
+    transform: rotate(-270deg); }
   100% {
-    visibility: visible;
-    transform: translateX(50px); } }
+    transform: rotate(0); } }
+@keyframes slide {
+  0% {
+    transform: margin-right auto; }
+  100% {
+    transform: translateX(-3rem); } }
+@keyframes slide-check {
+  0% {
+    transform: translateX(3rem); }
+  100% {
+    transform: translateX(-0.1rem); } }
 .header__menu {
   position: sticky;
   top: 0;
@@ -140,35 +148,74 @@
   box-shadow: 2px 2px 4px #d3d3d3;
   background-color: white;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
   height: 60px;
   margin-top: 20px;
   padding: 5px 0px 0px 8px;
   cursor: pointer;
-  overflow: hidden; }
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  animation: appear 0.5s ease-in-out forwards;
+  animation-fill-mode: backwards; }
   .food h3 {
     font-size: 16px;
     font-weight: 700px; }
   .food p {
     font-size: 13px;
-    padding-top: 8px; }
-  .food:hover i {
-    margin: -60px 0px 0px 235px; }
-  .food .check {
-    border: 2px solid #98e2cf;
-    border-radius: 0px 13px 13px 0px;
-    width: 3rem;
-    font-size: 15px;
-    color: white;
-    background-color: #98e2cf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: initial;
+    padding-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .food:nth-child(1) {
+    animation-delay: 80ms; }
+  .food:nth-child(2) {
+    animation-delay: 160ms; }
+  .food:nth-child(3) {
+    animation-delay: 240ms; }
+  .food:hover {
+    padding-right: 3rem;
+    overflow: x;
+    text-overflow: ellipsis; }
+  .food:hover .price {
+    animation: slide 1s ease forwards; }
+  .food:hover .check {
+    overflow: hidden;
+    visibility: visible;
+    padding: -6px 0px 0px 239px;
+    transition: all 1s;
+    animation: slide-check 1s ease forwards;
+    text-overflow: ellipsis; }
+  .food:hover .check i {
+    animation: spin 0.5s ease-in; }
+  .food .price {
+    padding-left: 250px;
+    margin-top: 20px;
+    font-weight: 700;
     z-index: 0;
-    height: 75px;
-    margin: -60px 0px 0px 285px; }
+    position: absolute; }
+
+.check {
+  border: 3px solid #98e2cf;
+  border-radius: 0px 13px 13px 0px;
+  width: 3rem;
+  font-size: 18px;
+  color: white;
+  background-color: #98e2cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 0;
+  height: 60px;
+  margin: -6px 0px 0px 239px;
+  overflow: hidden;
+  visibility: hidden; }
+  .check i {
+    padding: 6px auto 0px auto; }
 
 .food_type {
   animation: appear 1s ease-in-out;
@@ -188,6 +235,18 @@
     animation-delay: 200ms; }
   .food_type:nth-child(3) {
     animation-delay: 300ms; }
+  .food_type:nth-child(4) {
+    animation-delay: 400ms; }
+  .food_type:nth-child(5) {
+    animation-delay: 500ms; }
+  .food_type:nth-child(6) {
+    animation-delay: 600ms; }
+  .food_type:nth-child(7) {
+    animation-delay: 700ms; }
+  .food_type:nth-child(8) {
+    animation-delay: 800ms; }
+  .food_type:nth-child(9) {
+    animation-delay: 900ms; }
 
 .btn {
   margin: 20px 0px 0px 70px;
@@ -207,12 +266,6 @@
     letter-spacing: 1px; }
   .btn:hover {
     filter: brightness(120%); }
-
-.price {
-  padding-left: 250px;
-  margin-top: -22px;
-  font-weight: 700;
-  z-index: 1; }
 
 .footer {
   display: flex;
