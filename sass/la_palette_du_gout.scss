@@ -37,11 +37,12 @@
 .food{
   @include food;
   overflow: hidden;
-  animation: appear 0.5s ease-in-out forwards;
-  animation-fill-mode: backwards;
-  @for $i from 1 through 3{
+  animation: appear .4s ease-in forwards;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+  @for $i from 0 through 10{
     &:nth-child(#{$i}){
-      animation-delay: 80ms * $i;
+      animation-delay: 300ms * $i;
     }
   }
   &:hover{
@@ -52,15 +53,18 @@
   }
   &:hover .price{
     animation: slide 1s ease forwards;
-
+    animation-fill-mode: backwards;
   }
 
   &:hover .check{
-    overflow: hidden;
     visibility: visible;
+    position: absolute;
     padding: -6px 0px 0px 239px;
     transition: all 1s;
     animation: slide-check 1s ease forwards;
+    animation-direction: alternate;
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
     &:hover .check i{
@@ -68,6 +72,10 @@
     }
     .price{
       @include price;
+    }
+
+    &:hover .details{
+      width: 90%;
     }
   }
   
@@ -79,9 +87,10 @@
 
 .food_type{
   @include food_type;
-  animation: appear 1s ease-in-out;
-  animation-fill-mode: backwards;
-  @for $i from 1 through 9 {
+  animation: appear 1s ease-in;
+  animation-fill-mode: both;
+  transition-timing-function: linear;
+  @for $i from 1 through 10 {
     &:nth-child(#{$i}){
       animation-delay: 100ms * $i;
     }

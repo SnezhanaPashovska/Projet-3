@@ -2,9 +2,10 @@
   background-color: $headline-background;
   z-index: 1;
   width: 100%;
-  height: 1050px;
+  height: 95%;
   border-radius: 25px 25px 0px 0px;
   margin: -20px 0px 0px 0px;
+  padding-bottom: 50px;
 }
 
 @mixin menu_title {
@@ -74,32 +75,34 @@
   margin-top: 20px;
   padding: 5px 0px 0px 8px;
   cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  position: inherit;
+  transform: scale(1);
   
-
   & h3{
     font-size: 16px;
     font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
        
   }
   & p{
+    position: relative;
     font-size: 13px;
     padding-top: 8px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-
   }
-
 }
 
 @mixin price{
+  justify-content: flex-end;
+  align-items: flex-end;
   padding-left: 250px;
   margin-top: 20px;
   font-weight: 700;
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   
 }
@@ -128,7 +131,7 @@
 }
 
 @mixin checkmark {
-  border: 3px solid $color-tertiary;
+  border: 1px solid $color-tertiary;
   border-radius: 0px 13px 13px 0px;
   width: 3rem;
   font-size: 18px;
@@ -138,11 +141,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 0;
   height: 60px;
   margin: -6px 0px 0px 239px; 
   overflow: hidden;
   visibility: hidden;
+  z-index: 1;
+  
  
   & i{
     padding: 6px auto 0px auto;

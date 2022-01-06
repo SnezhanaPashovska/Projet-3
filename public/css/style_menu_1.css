@@ -53,9 +53,9 @@
     visibility: hidden; } }
 @keyframes appear {
   0% {
-    transform: scale(0); }
+    visibility: hidden; }
   100% {
-    transform: scale(1); } }
+    visibility: visible; } }
 @keyframes spin {
   0% {
     transform: rotate(-270deg); }
@@ -71,6 +71,11 @@
     transform: translateX(3rem); }
   100% {
     transform: translateX(-0.1rem); } }
+@keyframes slide-check-back {
+  0% {
+    transform: translateX(-0.1rem); }
+  100% {
+    transform: translateX(3rem); } }
 .header__menu {
   position: sticky;
   top: 0;
@@ -107,9 +112,10 @@
   background-color: #f6f6f6;
   z-index: 1;
   width: 100%;
-  height: 1050px;
+  height: 95%;
   border-radius: 25px 25px 0px 0px;
-  margin: -20px 0px 0px 0px; }
+  margin: -20px 0px 0px 0px;
+  padding-bottom: 50px; }
 
 .main_title {
   display: flex;
@@ -155,51 +161,79 @@
   margin-top: 20px;
   padding: 5px 0px 0px 8px;
   cursor: pointer;
+  position: inherit;
+  transform: scale(1);
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  animation: appear 0.5s ease-in-out forwards;
-  animation-fill-mode: backwards; }
+  animation: appear .4s ease-in forwards;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82); }
   .food h3 {
     font-size: 16px;
-    font-weight: 700px; }
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
   .food p {
+    position: relative;
     font-size: 13px;
     padding-top: 8px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
+  .food:nth-child(0) {
+    animation-delay: 0ms; }
   .food:nth-child(1) {
-    animation-delay: 80ms; }
+    animation-delay: 300ms; }
   .food:nth-child(2) {
-    animation-delay: 160ms; }
+    animation-delay: 600ms; }
   .food:nth-child(3) {
-    animation-delay: 240ms; }
+    animation-delay: 900ms; }
+  .food:nth-child(4) {
+    animation-delay: 1200ms; }
+  .food:nth-child(5) {
+    animation-delay: 1500ms; }
+  .food:nth-child(6) {
+    animation-delay: 1800ms; }
+  .food:nth-child(7) {
+    animation-delay: 2100ms; }
+  .food:nth-child(8) {
+    animation-delay: 2400ms; }
+  .food:nth-child(9) {
+    animation-delay: 2700ms; }
+  .food:nth-child(10) {
+    animation-delay: 3000ms; }
   .food:hover {
     padding-right: 3rem;
     overflow: x;
     text-overflow: ellipsis; }
   .food:hover .price {
-    animation: slide 1s ease forwards; }
+    animation: slide 1s ease forwards;
+    animation-fill-mode: backwards; }
   .food:hover .check {
-    overflow: hidden;
     visibility: visible;
+    position: absolute;
     padding: -6px 0px 0px 239px;
     transition: all 1s;
     animation: slide-check 1s ease forwards;
+    animation-direction: alternate;
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis; }
   .food:hover .check i {
     animation: spin 0.5s ease-in; }
   .food .price {
+    justify-content: flex-end;
+    align-items: flex-end;
     padding-left: 250px;
     margin-top: 20px;
     font-weight: 700;
-    z-index: 0;
+    z-index: 1;
     position: absolute; }
+  .food:hover .details {
+    width: 90%; }
 
 .check {
-  border: 3px solid #98e2cf;
+  border: 1px solid #98e2cf;
   border-radius: 0px 13px 13px 0px;
   width: 3rem;
   font-size: 18px;
@@ -209,17 +243,18 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 0;
   height: 60px;
   margin: -6px 0px 0px 239px;
   overflow: hidden;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 1; }
   .check i {
     padding: 6px auto 0px auto; }
 
 .food_type {
-  animation: appear 1s ease-in-out;
-  animation-fill-mode: backwards; }
+  animation: appear 1s ease-in;
+  animation-fill-mode: both;
+  transition-timing-function: linear; }
   .food_type h2 {
     font-size: 16px;
     margin: 20px 0px 10px 0px;
@@ -247,6 +282,8 @@
     animation-delay: 800ms; }
   .food_type:nth-child(9) {
     animation-delay: 900ms; }
+  .food_type:nth-child(10) {
+    animation-delay: 1000ms; }
 
 .btn {
   margin: 20px 0px 0px 70px;
