@@ -4,11 +4,12 @@
   "description": "\"website ohmyfood\"",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/la_palette_du_gout.scss:./public/css/style_menu_1.css",
-    "prefix": "postcss ./public/css/style_menu_1.css --use autoprefixer -d ./public/css/prefixed/",
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
+    "sass": "sass --watch ./sass/la_palette_du_gout.scss:./public/css/style_menu_1.css",
+    "prefix": "postcss ./public/css/style_menu_1.css --use autoprefixer -d ./public/css/prefixed/"
   },
+  
   "author": "\"Snezhana Pashovska\"",
   "license": "ISC",
   "dependencies": {

@@ -298,6 +298,7 @@
 .frame description {
   color: black;
 }
+
 .frame_text {
   display: flex;
   flex-direction: column;
