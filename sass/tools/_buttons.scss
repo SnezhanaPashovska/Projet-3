@@ -63,3 +63,24 @@
         margin: 0px 0px 0px -15px;
         
       }
+
+@mixin container_1_tablet {
+   width: 100%;
+   
+    &__title{
+      padding: 30px 20px 10px 190px;
+   }     
+}
+
+@mixin lists_tablet{
+  width: 50%;
+  margin: auto;
+  padding: 20px 80px 20px 0px;
+
+  & i{
+    opacity: 0.5;
+    padding: 1px 10px 0px 0px;
+    cursor: pointer;
+  }
+}
+

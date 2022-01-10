@@ -89,6 +89,52 @@
   animation: slideright 2s ease forwards infinite;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 992px){
+
+  .location{
+    @include location_tablet;
+  }
+
+  .headline__button{
+    @include button_tablet;
+  }
+
+  .container_1{
+    @include container_1_tablet;
+  }
+
+  .list_1, .list_2, .list_3{
+    @include lists_tablet;
+  }
+  
+  .container_2{
+    @include container_2_tablet;
+  }
+  
+  .frame{
+    @include frame_tablet;
+  
+  }
+
+  .frame_text{
+    @include frame_text_tablet;
+  }
+
+  .heart{
+    @include heart_tablet;
+  }
+
+  .footer{
+    @include footer_tablet;
+  }
+}
+
+
+
+
+
+
+
 
 
 

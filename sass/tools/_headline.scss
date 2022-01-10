@@ -61,3 +61,22 @@
       }
     }
 }
+
+  @mixin location_tablet {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 10px 90px 30px 315px;
+
+    &__search{
+      width: 35%;
+    }
+  }
+
+  @mixin button_tablet {
+    width: 25%;
+    margin: auto;
+  }
+
+  @mixin name {
+    
+  }

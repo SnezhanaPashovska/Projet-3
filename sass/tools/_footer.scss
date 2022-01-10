@@ -48,10 +48,13 @@
 
       & a{
         color: white;
-
-       
         }
       }
+    }
+
+    @mixin footer_tablet {
+
+     padding: 10px 0px 5px 280px;
     }
   
 

@@ -9,6 +9,8 @@
 @import"./tools/footer";
 @import"./tools/menu";
 
+
+
 .header__menu{
   @include header_menu;
 }
@@ -128,8 +130,61 @@
   @include btn;
 }
 
-
-
 .footer{
   @include footer;
 }
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+
+  .header__menu{
+    @include header_menu_tablet;
+  }
+
+  .food{
+    @include food_tablet;
+
+    &:hover .details{
+      width: 60%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &:hover h3{
+      width: 60%;
+    }
+  }
+
+  .main_title{
+    @include menu_title_tablet;
+  }  
+
+  .food_type{
+    @include food_type_tablet;
+  }
+
+  .price{
+    @include price_tablet;
+    transition: all 10s;
+  }
+
+  .check{
+    @include checkmark_tablet;
+  }
+
+  .details{
+    @include details_tablet;
+    transition: all 1.5s; 
+  }
+
+  .btn{
+    @include btn_tablet;
+  }
+
+  .footer{
+    @include footer_tablet;
+  }
+
+} 

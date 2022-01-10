@@ -45,3 +45,13 @@
   margin: auto;
 }
 
+@mixin header_menu_tablet{
+  padding: 0px 180px 0px 0px;
+
+  & i{
+    padding-right: 100px;
+  }
+}
+
+
+

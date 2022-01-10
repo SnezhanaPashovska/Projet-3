@@ -449,3 +449,54 @@
   background: #98e2cf;
   animation: slideright 2s ease forwards infinite;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .location {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 10px 90px 30px 300px;
+  }
+  .location__search {
+    width: 35%;
+  }
+
+  .headline__button {
+    width: 25%;
+    margin: auto;
+  }
+
+  .container_1 {
+    width: 100%;
+  }
+  .container_1__title {
+    padding: 30px 20px 10px 190px;
+  }
+
+  .list_1, .list_2, .list_3 {
+    width: 50%;
+    margin: auto;
+    padding: 20px 80px 20px 0px;
+  }
+  .list_1 i, .list_2 i, .list_3 i {
+    opacity: 0.5;
+    padding: 1px 10px 0px 0px;
+    cursor: pointer;
+  }
+
+  .container_2__title {
+    padding: 20px 0px 0px 195px;
+  }
+
+  .frame {
+    width: 50%;
+  }
+
+  .frame_text__badge {
+    width: 10%;
+    margin-right: 190px;
+  }
+
+  .heart {
+    padding: 6px 0px 20px 330px;
+  }
+}

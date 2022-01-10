@@ -101,6 +101,31 @@
    }
 }
 
+@mixin container_2_tablet{
+  &__title{
+    padding: 20px 0px 0px 195px;
+  }
+}
+
+@mixin frame_tablet{
+  width: 50%;
+}
+
+@mixin frame_text_tablet{
+
+  &__badge{
+    width: 10%;
+    margin-right: 190px;
+  }
+}
+
+@mixin heart_tablet {
+  padding: 6px 0px 20px 330px;
+}
+
+
+
+
 
 
 
