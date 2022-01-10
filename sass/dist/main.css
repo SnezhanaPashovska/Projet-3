@@ -454,7 +454,7 @@
   .location {
     width: 100%;
     margin: 0px auto 0px auto;
-    padding: 10px 90px 30px 300px;
+    padding: 10px 90px 30px 315px;
   }
   .location__search {
     width: 35%;
@@ -498,5 +498,9 @@
 
   .heart {
     padding: 6px 0px 20px 330px;
+  }
+
+  .footer {
+    padding: 10px 0px 5px 280px;
   }
 }
