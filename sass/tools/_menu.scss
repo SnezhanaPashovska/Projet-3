@@ -65,7 +65,7 @@
 @mixin food {
   border: 1px solid transparent;
   border-radius: 13px 13px 13px 13px;
-  box-shadow: 2px 2px 4px $color-border;
+  box-shadow: 1px 2px 4px $color-border;
   background-color: white;
   display: flex;
   flex-wrap: nowrap;
@@ -84,6 +84,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    width: 90%;
        
   }
   & p{
@@ -97,14 +98,19 @@
 }
 
 @mixin price{
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-left: 250px;
-  margin-top: 20px;
+  position: absolute;
   font-weight: 700;
   z-index: 1;
-  position: absolute;
-  
+  width: 10%;
+  justify-self: baseline;
+  margin: 20px 0px 0px 250px;
+}
+
+@mixin details {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
 }
 
 @mixin btn {
@@ -131,8 +137,7 @@
 }
 
 @mixin checkmark {
-  border: 1px solid $color-tertiary;
-  border-radius: 0px 13px 13px 0px;
+  border-radius: 0px 16px 16px 0px;
   width: 3rem;
   font-size: 18px;
   color: white;
@@ -141,11 +146,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  height: 60px;
+  height: 100%;
   margin: -6px 0px 0px 239px; 
-  overflow: hidden;
-  visibility: hidden;
-  z-index: 1;
+  overflow: visible;
+  visibility: visible;
+  z-index: 2;
+  
   
  
   & i{

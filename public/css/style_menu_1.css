@@ -53,9 +53,10 @@
     visibility: hidden; } }
 @keyframes appear {
   0% {
-    visibility: hidden; }
+    opacity: 0;
+    transform: translateY(10%); }
   100% {
-    visibility: visible; } }
+    opacity: 1; } }
 @keyframes spin {
   0% {
     transform: rotate(-270deg); }
@@ -70,12 +71,17 @@
   0% {
     transform: translateX(3rem); }
   100% {
-    transform: translateX(-0.1rem); } }
+    transform: translateX(-0.2rem); } }
 @keyframes slide-check-back {
   0% {
-    transform: translateX(-0.1rem); }
+    transform: translateX(-0.2rem); }
   100% {
     transform: translateX(3rem); } }
+@keyframes slide-back {
+  0% {
+    transform: translateX(-3rem); }
+  100% {
+    transform: margin-right auto; } }
 .header__menu {
   position: sticky;
   top: 0;
@@ -151,7 +157,7 @@
 .food {
   border: 1px solid transparent;
   border-radius: 13px 13px 13px 13px;
-  box-shadow: 2px 2px 4px #d3d3d3;
+  box-shadow: 1px 2px 4px #d3d3d3;
   background-color: white;
   display: flex;
   flex-wrap: nowrap;
@@ -164,15 +170,17 @@
   position: inherit;
   transform: scale(1);
   overflow: hidden;
-  animation: appear .4s ease-in forwards;
+  transition: ease-in;
+  animation: appear .5s ease-in-out forwards;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82); }
+  transition-timing-function: cubic-bezier(1, 2, 3, 4); }
   .food h3 {
     font-size: 16px;
     font-weight: 700px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    width: 90%; }
   .food p {
     position: relative;
     font-size: 13px;
@@ -207,34 +215,50 @@
     overflow: x;
     text-overflow: ellipsis; }
   .food:hover .price {
-    animation: slide 1s ease forwards;
-    animation-fill-mode: backwards; }
+    animation: slide 1.2s ease forwards;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    width: 10%; }
   .food:hover .check {
     visibility: visible;
     position: absolute;
     padding: -6px 0px 0px 239px;
     transition: all 1s;
-    animation: slide-check 1s ease forwards;
-    animation-direction: alternate;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; }
+    animation: slide-check 1s ease both;
+    animation-direction: normal; }
   .food:hover .check i {
     animation: spin 0.5s ease-in; }
   .food .price {
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 250px;
-    margin-top: 20px;
+    position: absolute;
     font-weight: 700;
     z-index: 1;
-    position: absolute; }
+    width: 10%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 250px;
+    z-index: 1;
+    width: 10%;
+    transition: all 20s;
+    animation: slide-back 1s ease; }
   .food:hover .details {
-    width: 90%; }
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .food:hover h3 {
+    width: 70%; }
+
+.details {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 90%;
+  transition: all 1.2s; }
+
+.name {
+  transition: all 1.2s; }
 
 .check {
-  border: 1px solid #98e2cf;
-  border-radius: 0px 13px 13px 0px;
+  border-radius: 0px 16px 16px 0px;
   width: 3rem;
   font-size: 18px;
   color: white;
@@ -243,16 +267,19 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  height: 60px;
+  height: 100%;
   margin: -6px 0px 0px 239px;
-  overflow: hidden;
-  visibility: hidden;
-  z-index: 1; }
+  overflow: visible;
+  visibility: visible;
+  z-index: 2;
+  transition: all 1s;
+  animation: slide-check-back 0.5s ease-in backwards;
+  animation-fill-mode: forwards; }
   .check i {
     padding: 6px auto 0px auto; }
 
 .food_type {
-  animation: appear 1s ease-in;
+  animation: appear 1s ease-in forwards;
   animation-fill-mode: both;
   transition-timing-function: linear; }
   .food_type h2 {
