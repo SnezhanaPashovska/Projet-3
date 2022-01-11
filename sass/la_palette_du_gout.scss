@@ -72,8 +72,9 @@
     animation-direction: normal;
   }
     &:hover .check i{
-    animation: spin 0.5s ease-in;
+    animation: spin 1s ease-in;
     }
+
     .price{
       @include price;
       z-index: 1;
@@ -272,7 +273,7 @@
      &:hover .check{
       visibility: visible;
       position: absolute;
-      margin: -6px 0px 0px 82%;
+      margin: -6px 0px 0px 88%;
       transition: all 1s;
       animation: slide-check 1s ease both;
       animation-direction: normal;
@@ -327,7 +328,7 @@
       @include food_lt_large;
   
       &:hover .check{
-        margin: -6px 0px 0px 91%;
+        margin: -10px 0px 0px 91%;
       }
     }
   

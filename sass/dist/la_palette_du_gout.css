@@ -82,7 +82,7 @@
 }
 @keyframes spin {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(-280deg);
   }
   100% {
     transform: rotate(0);
@@ -296,7 +296,7 @@
   animation-direction: normal;
 }
 .food:hover .check i {
-  animation: spin 0.5s ease-in;
+  animation: spin 1s ease-in;
 }
 .food .price {
   position: absolute;
@@ -713,7 +713,7 @@
   .food:hover .check {
     visibility: visible;
     position: absolute;
-    margin: -6px 0px 0px 82%;
+    margin: -6px 0px 0px 88%;
     transition: all 1s;
     animation: slide-check 1s ease both;
     animation-direction: normal;
@@ -861,7 +861,7 @@
     text-overflow: ellipsis;
   }
   .food:hover .check {
-    margin: -6px 0px 0px 91%;
+    margin: -10px 0px 0px 91%;
   }
 
   .main_title {
@@ -890,7 +890,7 @@
   }
 
   .check {
-    margin: -7px 0px 0px 120%;
+    margin: -10px 0px 0px 120%;
     height: 110%;
     width: 3.6rem;
     border: hidden;
