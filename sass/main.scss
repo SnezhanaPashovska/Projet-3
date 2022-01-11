@@ -113,7 +113,6 @@
   
   .frame{
     @include frame_tablet;
-  
   }
 
   .frame_text{
@@ -128,6 +127,198 @@
     @include footer_tablet;
   }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1096px){
+
+  .header{
+    @include header_lt;
+  }
+
+  .location{
+    @include location_lt;
+  }
+
+  .headline{
+    @include headline_lt; 
+  }
+  
+
+  .headline__button{
+    @include button_lt;
+  }
+
+  .container_1{
+  @include container_1_lt;
+  }
+
+  .container_1__list{
+    @include container_1__list;
+  }
+
+  .list_1, .list_2, .list_3{
+    @include lists_lt;
+  }
+
+  .container_2{
+  @include container_2_lt;
+  }
+  .frame{
+    @include frame_lt;
+  }
+
+  .frame_text{
+    @include frame_text_lt;
+  }
+
+  .description{
+    @include description_lt;
+  }
+
+  .heart{
+    @include heart_lt;
+  }
+}
+
+@media only screen and (min-width: 1097px) and (max-width: 1500px){
+
+  .header{
+    @include header_lt;
+  }
+
+  .location{
+    @include location_lt_large;
+  }
+
+  .headline{
+    @include headline_lt; 
+  }
+
+  .headline__button{
+    @include button_lt;
+  }
+
+  .container_1{
+  @include container_1_lt;
+
+  }
+
+  .container_1__list{
+    @include container_1__list;
+  }
+
+  .list_1, .list_2, .list_3{
+    @include lists_lt_large;
+  }
+
+  .container_2{
+    @include container_2_lt;
+  }
+  
+  .frame{
+     @include frame_lt_large;
+  }
+
+  .frame_text{
+    @include frame_text_lt_large;
+  }
+
+  .description{
+    @include description_lt;
+  }
+
+  .heart{
+    @include heart_lt_large;
+  }
+
+  .footer{
+    @include footer_desktop;
+  }
+}
+
+@media only screen and (min-width: 1499px){
+  .header{
+    @include header_lt;
+  }
+
+  .location{
+    @include location_desktop;
+  }
+
+  .headline{
+    @include headline_lt; 
+  }
+
+  .headline__button{
+    @include button_desktop;
+  }
+
+  .container_1{
+  @include container_1_desktop;
+
+  }
+
+  .container_1__list{
+    @include container_1__list;
+  }
+
+  .list_1, .list_2, .list_3{
+    @include lists_desktop;
+  }
+
+  .container_2{
+    @include container_2_desktop;
+  }
+  
+  .frame{
+     @include frame_desktop;
+  }
+
+  .frame_text{
+    @include frame_text_desktop;
+  }
+
+  .description{
+    @include description_lt;
+  }
+
+  .heart{
+    @include heart_desktop;
+  }
+
+  .footer{
+    @include footer_desktop;
+  }
+}
+
+@media only screen and (min-width: 2560px){
+
+	#block_page
+	{
+		margin: 0px 400px 0px 400px;
+	}
+  .location{
+    @include location_4k;
+  }
+
+  .container_2{
+    @include container_2_4k;
+  }
+
+  .frame{
+    @include frame_4k;
+ }
+
+ .frame_text{
+  @include frame_text_4k;
+}
+
+  .heart{
+    @include heart_4k;
+  }
+
+
+}
+
 
 
 

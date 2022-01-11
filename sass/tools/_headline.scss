@@ -12,13 +12,14 @@
   z-index: 1;
 
   &__search{
-    width: 80%;
+    width: 85%;
     background-color: $header-background;
     border: 1px solid transparent;
     font-family: Roboto, sans-serif;
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: 5px;
+    
   }
   & i{
     opacity: 0.6;
@@ -68,7 +69,8 @@
     padding: 10px 90px 30px 315px;
 
     &__search{
-      width: 35%;
+      width: 37%;
+      font-size: 18px;
     }
   }
 
@@ -77,6 +79,75 @@
     margin: auto;
   }
 
-  @mixin name {
+  //small laptop version*/
+
+
+@mixin location_lt {
+    width: 100%;
+    margin: 0px auto 0px auto;
+    padding: 12px 0px 30px 420px;
+    height: 50px;
+
+    &__search{
+      width: 120px;
+      
+    }
+}
+
+@mixin headline_lt{
+
+    font-size: 16px;
+
+  &__slogan{
+    padding: 5px 0px 10px 0px;
+    font-size: 18px;
+  }
+  
+}
+
+@mixin button_lt {
+  width: 25%;
+  margin: auto;
+  height: 60px;
+  font-size: 16px;
+}
+
+@mixin location_lt_large {
+  width: 100%;
+  margin: 0px auto 0px auto;
+  padding: 12px 0px 30px 650px;
+  height: 50px;
+
+  &__search{
+    width: 120px;
     
   }
+}
+
+@mixin location_desktop {
+  width: 100%;
+  margin: 0px auto 0px auto;
+  padding: 12px 0px 30px 680px;
+  height: 50px;
+
+  &__search{
+    width: 120px; 
+  }
+}
+
+@mixin button_desktop {
+  width: 15%;
+  margin: auto;
+}
+
+@mixin location_4k {
+  width: 100%;
+  margin: 0px auto 0px auto;
+  padding: 12px 0px 30px 800px;
+  height: 50px;
+
+  &__search{
+    width: 120px; 
+  }
+}
+

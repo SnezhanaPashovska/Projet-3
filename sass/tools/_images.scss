@@ -3,7 +3,6 @@
   flex-direction: column;
   flex-wrap: nowrap;
   font-family: Roboto, sans-serif;
-  
   font-weight: 600;
   font-size: 14px;
   background-color: $headline-background;
@@ -18,7 +17,7 @@
 
 @mixin frame{
   width: 85%;
-  height: 190px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -84,7 +83,7 @@
 }
 
 @mixin heart {
-  padding: 0px 0px 20px 230px;
+  padding: 0px 0px 20px 220px;
   font-size: 20px;
   position: absolute;
   margin-top: 0px;
@@ -123,6 +122,213 @@
   padding: 6px 0px 20px 330px;
 }
 
+@mixin container_2_lt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__title{
+    padding: 20px 0px 0px 20px;
+    margin: 50px 0px 0px 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+  }
+
+}
+
+@mixin frame_lt{
+  width: 35%;
+  margin: 10px 0px 0px 100px;
+  height: 220px;
+}
+
+@mixin frame_text_lt{
+  font-size: 16px;
+
+  &__badge{
+    background-color: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    width: 100px;
+    padding: 5px 0px 5px 18px;
+    position: relative;
+    right: 16px;
+    margin: -120px 0px 0px 260px;
+    font-weight: 600;
+    color: $color-badge;
+  }
+}
+
+@mixin description_lt{
+  font-size: 16px;
+
+  &__food{
+    font-size: 18px;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    margin: 10px 0px 10px 0px;
+  }
+
+  &__place{
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 2px 0px 7px 10px;
+  }
+}
+
+@mixin heart_lt{
+  padding: 0px 0px 20px 320px;
+  margin-top: 20px;
+  position: absolute;
+}
+
+@mixin container_2_lt_large {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__title{
+    padding: 20px 0px 0px 18px;
+    margin: 50px 0px 0px 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+  }
+
+}
+
+@mixin frame_lt_large{
+  height: 280px;
+  width: 35%;
+  margin: 10px 0px 0px 120px;
+  
+  & img{
+    height: 200px;
+  }
+
+}
+
+@mixin frame_text_lt_large{
+  font-size: 16px;
+
+  &__badge{
+    background-color: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    width: 100px;
+    padding: 5px 0px 5px 18px;
+    position: relative;
+    right: 16px;
+    margin: -180px 0px 0px 380px;
+    font-weight: 600;
+    color: $color-badge;
+  }
+}
+
+@mixin heart_lt_large{
+  padding: 0px 0px 20px 450px;
+  margin-top: 20px;
+  position: absolute;
+  font-size: 25px;
+}
+ //desktop version*/
+
+
+@mixin container_2_desktop {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__title{
+    padding: 20px 0px 0px 50px;
+    margin: 50px 0px 0px 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+  }
+
+}
+
+@mixin frame_desktop{
+  height: 280px;
+  width: 35%;
+  margin: 10px 0px 0px 120px;
+  
+  & img{
+    height: 200px;
+  }
+}
+
+@mixin frame_text_desktop{
+  font-size: 16px;
+
+  &__badge{
+    background-color: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    width: 100px;
+    padding: 5px 0px 5px 18px;
+    position: relative;
+    right: 16px;
+    margin: -180px 0px 0px 420px;
+    font-weight: 600;
+    color: $color-badge;
+  }
+}
+
+@mixin heart_desktop{
+  padding: 0px 0px 20px 470px;
+  margin-top: 20px;
+  position: absolute;
+  font-size: 25px;
+}
+
+
+@mixin frame_4k{
+  height: 280px;
+  width: 35%;
+  margin: 10px 0px 0px 140px;
+  
+  & img{
+    height: 200px;
+  }
+}
+
+@mixin container_2_4k {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__title{
+    padding: 20px 0px 0px 52px;
+    margin: 50px 0px 0px 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+  }
+
+}
+
+@mixin frame_text_4k{
+  font-size: 16px;
+
+  &__badge{
+    background-color: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    width: 100px;
+    padding: 5px 0px 5px 18px;
+    position: relative;
+    right: 16px;
+    margin: -180px 0px 0px 490px;
+    font-weight: 600;
+    color: $color-badge;
+  }
+}
+
+@mixin heart_4k{
+  padding: 0px 0px 20px 520px;
+  margin-top: 20px;
+  position: absolute;
+  font-size: 25px;
+}
 
 
 
