@@ -76,7 +76,7 @@
   margin-top: 20px;
   padding: 5px 0px 0px 8px;
   cursor: pointer;
-  position: inherit;
+  position: relative;
   transform: scale(1);
   
   & h3{
@@ -111,11 +111,11 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 90%;
+    width: 80%;
 }
 
 @mixin btn {
-  margin: 20px 0px 0px 70px; 
+  margin: 20px auto 0px auto; 
   border-radius: 30px 30px 30px 30px;
   width: 50%;
   height: 45px;
@@ -127,7 +127,7 @@
   box-shadow: 2px 3px 7px $header-background;
 
     & p{
-      padding: 13px 10px 5px 40px;
+      padding: 13px 10px 5px 35px;
       font-size: 13px;
       font-family: Roboto, sans-serif;
       letter-spacing: 1px;
@@ -139,7 +139,7 @@
 
 @mixin checkmark {
   border-radius: 0px 16px 16px 0px;
-  width: 3rem;
+  width: 3.5rem;
   font-size: 18px;
   color: white;
   background-color: $color-tertiary;
@@ -148,7 +148,7 @@
   justify-content: center;
   position: absolute;
   height: 102%;
-  margin: -6px 0px 0px 239px; 
+  margin: -6px 0px 0px 120%; 
   overflow: hidden;
   visibility: hidden;
   z-index: 1;
@@ -159,6 +159,45 @@
   }
  
 }
+
+@mixin price_mobile_large{
+  position: relative;
+  font-weight: 700;
+  z-index: 1;
+  width: 5%;
+  justify-self: baseline;
+  margin: 20px 0px 0px 250px;
+}
+
+@mixin details_mobile_large {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 60%;
+}
+
+@mixin food_mobile_large{
+  & h3{
+    font-size: 16px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 65%;   
+  }
+}
+
+@mixin btn_mobile_large {
+  width: 50%;
+  margin: 20px auto 0px auto;
+
+    
+  & p{
+    text-align: center;
+    padding: 13px 10px 5px 0px;
+  }
+}
+//tablet version*/
 
 @mixin food_tablet{
   max-width: 45%;
@@ -181,7 +220,7 @@
 
 @mixin price_tablet{
   position: absolute;
-  margin: 20px 0px 0px 260px;
+  margin: 20px 0px 0px 280px !important;
   width: 10%;
 }
 
@@ -195,10 +234,11 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 90%;
+  width: 70%;
 }
 
 @mixin btn_tablet{
+
   width: 25%;
   margin: auto;
 
@@ -206,4 +246,184 @@
     padding: 13px 10px 5px 50px;
   }
 }
+
+//small laptop version*//
+
+@mixin food_type_lt {
+  
+  h2  {
+  font-size: 16px;
+  margin: 20px 0px 10px 250px;
+  content: "";
+  position: relative;
+  width: 4%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid $color-tertiary;
+  }  
+}
+
+@mixin food_lt{
+  max-width: 50%;
+  margin: 20px auto 0px auto;
+  border: 1px solid transparent;
+  border: hidden;
+  border-radius: 13px 13px 13px 13px;
+  box-shadow: 1px 2px 4px $color-border;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 60px;
+  padding: 5px 0px 0px 8px;
+  cursor: pointer;
+  position: inherit;
+  transform: scale(1);
+  
+  & h3{
+    font-size: 16px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;   
+  }
+
+  & p{
+    position: relative;
+    font-size: 13px;
+    padding-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@mixin menu_title_lt{
+  padding: 20px 10px 5px 15px;
+}
+
+@mixin price_lt{
+  position: absolute;
+  font-weight: 700;
+  z-index: 1;
+  width: 5%;
+  justify-self: baseline;
+  margin: 20px 0px 0px 400px !important;
+}
+
+@mixin checkmark_lt{
+  margin: -6px 0px 0px 120%;
+  height: 103%;
+  border: hidden;
+}
+
+@mixin btn_lt {
+  width: 20%;
+  margin: 20px auto 0px auto;
+
+    
+  & p{
+    text-align: center;
+    padding: 13px 10px 5px 0px;
+  }
+}
+
+//large laptop version*//
+
+@mixin menu_title_lt_large{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: Shrikhand, cursive;
+  font-weight: 300;
+  font-size: 16px;
+  width: 100%;
+  padding: 20px 10px 5px 0px;
+  cursor: pointer;
+  padding: 20px 10px 5px 15px;
+
+  & i{
+    font-size: 26px;
+  }
+}
+
+@mixin food_type_lt_large {
+  
+  h2  {
+  font-size: 22px;
+  margin: 20px 0px 10px 360px;
+  content: "";
+  position: relative;
+  width: 4%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid $color-tertiary;
+  }  
+}
+
+@mixin food_lt_large{
+  max-width: 50%;
+  margin: 20px auto 0px auto;
+  border: 1px solid transparent;
+  border: hidden;
+  border-radius: 13px 13px 13px 13px;
+  box-shadow: 1px 2px 4px $color-border;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 80px;
+  padding: 8px 0px 0px 8px;
+  cursor: pointer;
+  position: inherit;
+  transform: scale(1);
+  
+  & h3{
+    font-size: 20px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;   
+  }
+
+  & p{
+    position: relative;
+    font-size: 17px;
+    padding-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+
+@mixin price_lt_large{
+  position: absolute;
+  font-weight: 700;
+  z-index: 1;
+  width: 5%;
+  justify-self: baseline;
+  margin: 20px 0px 0px 500px !important;
+}
+
+@mixin checkmark_lt_large{
+  margin: -7px 0px 0px 120%;
+  height: 110%;
+  width: 3.6rem;
+  border: hidden;
+}
+
+@mixin btn_lt_large {
+  width: 20%;
+  margin: 20px auto 0px auto;
+
+    
+  & p{
+    text-align: center;
+    padding: 13px 10px 5px 0px;
+  }
+}
+
 

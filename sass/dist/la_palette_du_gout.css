@@ -98,7 +98,7 @@
 }
 @keyframes slide-check {
   0% {
-    transform: translateX(3rem);
+    transform: translateX(3.2rem);
   }
   100% {
     transform: translateX(-0.1rem);
@@ -109,7 +109,7 @@
     transform: translateX(-0.1rem);
   }
   100% {
-    transform: translateX(3rem);
+    transform: translateX(3.2rem);
   }
 }
 @keyframes slide-back {
@@ -143,6 +143,7 @@
   object-fit: cover;
   width: 60%;
   margin: auto;
+  position: sticky;
 }
 
 .pic {
@@ -218,7 +219,7 @@
   margin-top: 20px;
   padding: 5px 0px 0px 8px;
   cursor: pointer;
-  position: inherit;
+  position: relative;
   transform: scale(1);
   overflow: hidden;
   transition: ease-in;
@@ -276,7 +277,7 @@
   animation-delay: 3000ms;
 }
 .food:hover {
-  padding-right: 3rem;
+  padding-right: 3.5rem;
   overflow: x;
   text-overflow: ellipsis;
 }
@@ -289,11 +290,10 @@
 .food:hover .check {
   visibility: visible;
   position: absolute;
-  padding: -6px 0px 0px 239px;
+  margin: -6px 0px 0px 80%;
   transition: all 1s;
   animation: slide-check 1s ease both;
   animation-direction: normal;
-  border: 1px solid black;
 }
 .food:hover .check i {
   animation: spin 0.5s ease-in;
@@ -324,8 +324,8 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 90%;
-  transition: all 1.2s;
+  width: 80%;
+  transition: all 1.5s;
 }
 
 .name {
@@ -334,7 +334,7 @@
 
 .check {
   border-radius: 0px 16px 16px 0px;
-  width: 3rem;
+  width: 3.5rem;
   font-size: 18px;
   color: white;
   background-color: #98e2cf;
@@ -343,7 +343,7 @@
   justify-content: center;
   position: absolute;
   height: 102%;
-  margin: -6px 0px 0px 239px;
+  margin: -6px 0px 0px 120%;
   overflow: hidden;
   visibility: hidden;
   z-index: 1;
@@ -402,7 +402,7 @@
 }
 
 .btn {
-  margin: 20px 0px 0px 70px;
+  margin: 20px auto 0px auto;
   border-radius: 30px 30px 30px 30px;
   width: 50%;
   height: 45px;
@@ -414,7 +414,7 @@
   box-shadow: 2px 3px 7px #eaeaea;
 }
 .btn p {
-  padding: 13px 10px 5px 40px;
+  padding: 13px 10px 5px 35px;
   font-size: 13px;
   font-family: Roboto, sans-serif;
   letter-spacing: 1px;
@@ -487,6 +487,17 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+  .food:hover .check {
+    visibility: visible;
+    position: absolute;
+    margin: -6px 0px 0px 82%;
+    transition: all 1s;
+    animation: slide-check 1s ease both;
+    animation-direction: normal;
+  }
+  .food:hover .check i {
+    animation: spin 0.5s ease-in;
+  }
   .food:hover h3 {
     width: 60%;
   }
@@ -504,7 +515,7 @@
 
   .price {
     position: absolute;
-    margin: 20px 0px 0px 260px;
+    margin: 20px 0px 0px 280px !important;
     width: 10%;
     transition: all 10s;
   }
@@ -519,7 +530,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 90%;
+    width: 70%;
     transition: all 1.5s;
   }
 
@@ -533,5 +544,386 @@
 
   .footer {
     padding: 10px 0px 5px 280px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  .food {
+    border: 1px solid transparent;
+    border: hidden;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 1px 2px 4px #d3d3d3;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 5px 0px 0px 8px;
+    cursor: pointer;
+    position: relative;
+    transform: scale(1);
+  }
+  .food h3 {
+    font-size: 16px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+  .food p {
+    position: relative;
+    font-size: 13px;
+    padding-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .food:hover .details {
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .food:hover .check {
+    visibility: visible;
+    position: absolute;
+    margin: -6px 0px 0px 85%;
+    transition: all 1s;
+    animation: slide-check 1s ease both;
+    animation-direction: normal;
+  }
+
+  .price {
+    position: relative;
+    font-weight: 700;
+    z-index: 1;
+    width: 5%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 250px;
+  }
+
+  .details {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 60%;
+    transition: all 1.5s;
+  }
+
+  .food h3 {
+    font-size: 16px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 65%;
+  }
+  .food:hover h3 {
+    width: 60%;
+  }
+
+  .btn {
+    width: 50%;
+    margin: 20px auto 0px auto;
+  }
+  .btn p {
+    text-align: center;
+    padding: 13px 10px 5px 0px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1096px) {
+  .header__menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 25px auto 10px auto;
+    z-index: 2;
+  }
+  .header__menu i {
+    color: black;
+    opacity: 0.8;
+    font-size: 18px;
+    margin-left: -150px;
+  }
+
+  #logo img {
+    display: flex;
+    object-fit: cover;
+    width: 50%;
+    margin: 0px 50px 0px 0px;
+    position: sticky;
+  }
+
+  .food_type h2 {
+    font-size: 16px;
+    margin: 20px 0px 10px 250px;
+    content: "";
+    position: relative;
+    width: 4%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid #98e2cf;
+  }
+
+  .food {
+    max-width: 50%;
+    margin: 20px auto 0px auto;
+    border: 1px solid transparent;
+    border: hidden;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 1px 2px 4px #d3d3d3;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 60px;
+    padding: 5px 0px 0px 8px;
+    cursor: pointer;
+    position: inherit;
+    transform: scale(1);
+  }
+  .food h3 {
+    font-size: 16px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
+  }
+  .food p {
+    position: relative;
+    font-size: 13px;
+    padding-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .food:hover .details {
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .food:hover .check {
+    visibility: visible;
+    position: absolute;
+    margin: -6px 0px 0px 82%;
+    transition: all 1s;
+    animation: slide-check 1s ease both;
+    animation-direction: normal;
+  }
+
+  .main_title {
+    padding: 20px 10px 5px 15px;
+  }
+
+  .price {
+    position: absolute;
+    font-weight: 700;
+    z-index: 1;
+    width: 5%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 400px !important;
+  }
+
+  .check {
+    margin: -6px 0px 0px 120%;
+    height: 103%;
+    border: hidden;
+  }
+
+  .btn {
+    width: 20%;
+    margin: 20px auto 0px auto;
+  }
+  .btn p {
+    text-align: center;
+    padding: 13px 10px 5px 0px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    background-color: #353535;
+    margin-top: 0px;
+    color: white;
+    padding: 10px 0px 5px 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+  }
+  .footer__logo {
+    width: 40%;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+  }
+  .footer__logo img {
+    object-fit: cover;
+    width: 40%;
+    padding: 20px 0px 10px 5px;
+  }
+}
+@media only screen and (min-width: 1097px) and (max-width: 1500px) {
+  .header__menu {
+    height: 80px;
+  }
+
+  .header__menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 25px auto 10px auto;
+    z-index: 2;
+  }
+  .header__menu i {
+    color: black;
+    opacity: 0.8;
+    font-size: 20px;
+    margin-left: -270px;
+  }
+
+  #logo img {
+    display: flex;
+    object-fit: cover;
+    width: 50%;
+    margin: 0px 50px 0px 0px;
+    position: sticky;
+  }
+
+  .main_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Shrikhand, cursive;
+    font-weight: 300;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px 10px 5px 0px;
+    cursor: pointer;
+    padding: 20px 10px 5px 15px;
+  }
+  .main_title i {
+    font-size: 26px;
+  }
+
+  .food_type h2 {
+    font-size: 22px;
+    margin: 20px 0px 10px 360px;
+    content: "";
+    position: relative;
+    width: 4%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid #98e2cf;
+  }
+
+  .food {
+    max-width: 50%;
+    margin: 20px auto 0px auto;
+    border: 1px solid transparent;
+    border: hidden;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 1px 2px 4px #d3d3d3;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 80px;
+    padding: 8px 0px 0px 8px;
+    cursor: pointer;
+    position: inherit;
+    transform: scale(1);
+  }
+  .food h3 {
+    font-size: 20px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
+  }
+  .food p {
+    position: relative;
+    font-size: 17px;
+    padding-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .food:hover .check {
+    margin: -6px 0px 0px 91%;
+  }
+
+  .main_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Shrikhand, cursive;
+    font-weight: 300;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px 10px 5px 0px;
+    cursor: pointer;
+    padding: 20px 10px 5px 15px;
+  }
+  .main_title i {
+    font-size: 26px;
+  }
+
+  .price {
+    position: absolute;
+    font-weight: 700;
+    z-index: 1;
+    width: 5%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 500px !important;
+  }
+
+  .check {
+    margin: -7px 0px 0px 120%;
+    height: 110%;
+    width: 3.6rem;
+    border: hidden;
+  }
+
+  .btn {
+    width: 20%;
+    margin: 20px auto 0px auto;
+  }
+  .btn p {
+    text-align: center;
+    padding: 13px 10px 5px 0px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    background-color: #353535;
+    margin-top: 0px;
+    color: white;
+    padding: 10px 0px 5px 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+  }
+  .footer__logo {
+    width: 40%;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+  }
+  .footer__logo img {
+    object-fit: cover;
+    width: 40%;
+    padding: 20px 0px 10px 5px;
   }
 }

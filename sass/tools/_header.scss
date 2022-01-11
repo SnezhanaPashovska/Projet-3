@@ -43,6 +43,7 @@
   object-fit: cover;
   width: 60%;
   margin: auto;
+  position: sticky;
 }
 
 @mixin header_menu_tablet{
@@ -55,6 +56,66 @@
 
 @mixin header_lt{
   height: 70px;
+}
+
+@mixin header_menu_lt {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px auto 10px auto;
+  z-index: 2;
+
+  & i{
+    color: black;
+    opacity: 0.8;
+    font-size: 18px;
+    margin-left: -150px;
+  }
+}
+
+@mixin logoimg_menu_lt{
+  display: flex;
+  object-fit: cover;
+  width: 50%;
+  margin: 0px 50px 0px 0px;
+  position: sticky;
+}
+
+//large laptop version*//
+
+@mixin header_lt_large{
+  height: 80px;
+}
+
+@mixin header_menu_lt_large {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px auto 10px auto;
+  z-index: 2;
+
+  & i{
+    color: black;
+    opacity: 0.8;
+    font-size: 20px;
+    margin-left: -270px;
+  }
+}
+
+@mixin logoimg_menu_lt_large{
+  display: flex;
+  object-fit: cover;
+  width: 50%;
+  margin: 0px 50px 0px 0px;
+  position: sticky;
 }
 
 
