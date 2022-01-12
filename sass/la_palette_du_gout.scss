@@ -366,5 +366,43 @@
     .menu{
       @include menus_desktop;
     }
+
+    .main_title{
+      @include menu_title_desktop;
+    }
+
+    .food{
+      &:hover .check{
+        visibility: visible;
+        position: absolute;
+        margin: -6px 0px 0px 87%;
+        transition: all 1s;
+        animation: slide-check 1s ease both;
+        animation-direction: normal;
+      }
+    }
+
+    .food_type{
+      @include food_type_desktop;
+    }
+
+    .price{
+      @include price_desktop;
+    }
+
+    .btn{
+      @include btn_desktop;
+    }
+
+    .footer{
+      @include footer_desktop;
+    }
+  }
+
+  @media only screen and (min-width: 2560px){
+
+    #block_page{
+		margin: 0px 350px 0px 350px;
+	}
   }
 

@@ -429,6 +429,61 @@
 @mixin menus_desktop{
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+
+@mixin menu_title_desktop {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0px 55px 0px 55px;
+
+  & h1{
+    font-size: 28px;
+    margin: 40px 0px 40px 0px;
+  }
+
+  & i{
+    margin: 40px 0px 40px 0px;
+  }
+}
+
+@mixin food_desktop {
+  
+}
+
+@mixin food_type_desktop {
+  width: 30%;
+
+  h2  {
+    font-size: 22px;
+    margin: 20px 0px 30px 0px;
+    content: "";
+    position: relative;
+    width: 12%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid $color-tertiary;
+    }  
+}
+
+@mixin price_desktop{
+  position: absolute;
+  font-weight: 700;
+  z-index: 1;
+  width: 5%;
+  justify-self: baseline;
+  margin: 20px 0px 0px 380px !important;
+}
+
+@mixin btn_desktop {
+  width: 15%;
+  margin: 50px auto 20px auto;
+
+  & p{
+    text-align: center;
+    padding: 13px 10px 5px 0px;
+  }
 }
 
 
