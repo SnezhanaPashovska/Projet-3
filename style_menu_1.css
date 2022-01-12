@@ -1,23 +1,860 @@
-/*
-Errno::ENOENT: No such file or directory @ rb_sysopen - la_palette_du_gout.scss
+@keyframes rotate {
+  0% {
+    background: #9356DC;
+    transform: rotate(0deg); }
+  50% {
+    background: #FF79DA;
+    transform: rotate(0deg); }
+  100% {
+    background: #98e2cf;
+    transform: rotate(360deg); } }
+@keyframes slideleft {
+  0% {
+    background: #FF79DA;
+    transform: translateX(0px); }
+  25% {
+    background: #FF79DA;
+    transform: translateX(-100px); }
+  50% {
+    background: #98e2cf;
+    transform: translateX(0px); }
+  100% {
+    background: #98e2cf;
+    transform: translateX(); } }
+@keyframes slideright {
+  0% {
+    background: #FF79DA;
+    transform: translateX(0px); }
+  25% {
+    background: #FF79DA;
+    transform: translateX(100px); }
+  50% {
+    background: #98e2cf;
+    transform: translateX(0px); }
+  100% {
+    background: #98e2cf;
+    transform: translateX(); } }
+@keyframes preloader {
+  0% {
+    background-color: white;
+    opacity: 1; }
+  25% {
+    background-color: white;
+    opacity: 0.8; }
+  50% {
+    background-color: white;
+    opacity: 0.5; }
+  85% {
+    background-color: white;
+    opacity: 0.3; }
+  100% {
+    background-color: white;
+    opacity: 0;
+    visibility: hidden; } }
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10%); }
+  100% {
+    opacity: 1; } }
+@keyframes spin {
+  0% {
+    transform: rotate(-280deg); }
+  100% {
+    transform: rotate(0); } }
+@keyframes slide {
+  0% {
+    transform: margin-right auto; }
+  100% {
+    transform: translateX(-3rem); } }
+@keyframes slide-check {
+  0% {
+    transform: translateX(3.2rem); }
+  100% {
+    transform: translateX(-0.1rem); } }
+@keyframes slide-check-back {
+  0% {
+    transform: translateX(-0.1rem); }
+  100% {
+    transform: translateX(3.2rem); } }
+@keyframes slide-back {
+  0% {
+    transform: translateX(-3rem); }
+  100% {
+    transform: margin-right auto; } }
+.header__menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px auto 10px auto;
+  z-index: 2;
+  padding: 0px 0px 0px 20px; }
+  .header__menu i {
+    color: black;
+    opacity: 0.8;
+    font-size: 18px; }
 
-Backtrace:
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:454:in `read'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-C:/Ruby30-x64/bin/sass:23:in `load'
-C:/Ruby30-x64/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - la_palette_du_gout.scss"; }
+#logo img {
+  display: flex;
+  object-fit: cover;
+  width: 60%;
+  margin: auto;
+  position: sticky; }
+
+.pic {
+  width: 100%;
+  height: 800px; }
+  .pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    position: relative; }
+
+.main_menu {
+  background-color: #f6f6f6;
+  z-index: 1;
+  width: 100%;
+  height: 95%;
+  border-radius: 25px 25px 0px 0px;
+  margin: -20px 0px 0px 0px;
+  padding-bottom: 50px; }
+
+.main_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: Shrikhand, cursive;
+  font-weight: 300;
+  font-size: 12px;
+  width: 100%;
+  padding: 20px 10px 5px 0px;
+  cursor: pointer; }
+  .main_title i {
+    font-size: 20px;
+    padding-top: 6px; }
+    .main_title i:hover {
+      color: transparent;
+      font-weight: 900;
+      background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+      background-clip: text;
+      -webkit-background-clip: text;
+      transition: all 100ms; }
+  .main_title h1 {
+    padding-right: 5px; }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  padding: 10px 10px 20px 18px; }
+  .menu:hover {
+    animation: checkmark 2s ease forwards infinite; }
+
+.food {
+  border: 1px solid transparent;
+  border: hidden;
+  border-radius: 13px 13px 13px 13px;
+  box-shadow: 1px 2px 4px #d3d3d3;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  max-width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  padding: 5px 0px 0px 8px;
+  cursor: pointer;
+  position: relative;
+  transform: scale(1);
+  overflow: hidden;
+  transition: ease-in;
+  animation: appear .5s ease-in-out forwards;
+  animation-fill-mode: both;
+  transition-timing-function: cubic-bezier(1, 2, 3, 4); }
+  .food h3 {
+    font-size: 16px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%; }
+  .food p {
+    position: relative;
+    font-size: 13px;
+    padding-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .food:nth-child(0) {
+    animation-delay: 0ms; }
+  .food:nth-child(1) {
+    animation-delay: 300ms; }
+  .food:nth-child(2) {
+    animation-delay: 600ms; }
+  .food:nth-child(3) {
+    animation-delay: 900ms; }
+  .food:nth-child(4) {
+    animation-delay: 1200ms; }
+  .food:nth-child(5) {
+    animation-delay: 1500ms; }
+  .food:nth-child(6) {
+    animation-delay: 1800ms; }
+  .food:nth-child(7) {
+    animation-delay: 2100ms; }
+  .food:nth-child(8) {
+    animation-delay: 2400ms; }
+  .food:nth-child(9) {
+    animation-delay: 2700ms; }
+  .food:nth-child(10) {
+    animation-delay: 3000ms; }
+  .food:hover {
+    padding-right: 3.5rem;
+    overflow: x;
+    text-overflow: ellipsis; }
+  .food:hover .price {
+    animation: slide 1.2s ease forwards;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    width: 10%; }
+  .food:hover .check {
+    visibility: visible;
+    position: absolute;
+    margin: -6px 0px 0px 80%;
+    transition: all 1s;
+    animation: slide-check 1s ease both;
+    animation-direction: normal; }
+  .food:hover .check i {
+    animation: spin 1s ease-in; }
+  .food .price {
+    position: absolute;
+    font-weight: 700;
+    z-index: 1;
+    width: 10%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 230px;
+    z-index: 1;
+    width: 10%;
+    transition: all 20s;
+    animation: slide-back 1s ease; }
+  .food:hover .details {
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .food:hover h3 {
+    width: 70%; }
+
+.details {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
+  transition: all 1.5s; }
+
+.name {
+  transition: all 1.2s; }
+
+.check {
+  border-radius: 0px 16px 16px 0px;
+  width: 3.5rem;
+  font-size: 18px;
+  color: white;
+  background-color: #98e2cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 102%;
+  margin: -6px 0px 0px 120%;
+  overflow: hidden;
+  visibility: hidden;
+  z-index: 1;
+  transition: all 1s;
+  animation: slide-check-back 0.5s ease-in backwards;
+  animation-fill-mode: forwards; }
+  .check i {
+    padding: 6px auto 0px auto; }
+
+.food_type {
+  animation: appear 1s ease-in forwards;
+  animation-fill-mode: both;
+  transition-timing-function: linear; }
+  .food_type h2 {
+    font-size: 16px;
+    margin: 20px 0px 10px 0px;
+    content: "";
+    position: relative;
+    width: 13%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid #98e2cf; }
+  .food_type:nth-child(1) {
+    animation-delay: 100ms; }
+  .food_type:nth-child(2) {
+    animation-delay: 200ms; }
+  .food_type:nth-child(3) {
+    animation-delay: 300ms; }
+  .food_type:nth-child(4) {
+    animation-delay: 400ms; }
+  .food_type:nth-child(5) {
+    animation-delay: 500ms; }
+  .food_type:nth-child(6) {
+    animation-delay: 600ms; }
+  .food_type:nth-child(7) {
+    animation-delay: 700ms; }
+  .food_type:nth-child(8) {
+    animation-delay: 800ms; }
+  .food_type:nth-child(9) {
+    animation-delay: 900ms; }
+  .food_type:nth-child(10) {
+    animation-delay: 1000ms; }
+
+.btn {
+  margin: 20px auto 0px auto;
+  border-radius: 30px 30px 30px 30px;
+  width: 50%;
+  height: 45px;
+  cursor: pointer;
+  border: 1px solid #f6f6f6;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  box-shadow: 2px 3px 7px #eaeaea; }
+  .btn p {
+    padding: 13px 10px 5px 35px;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 1px; }
+  .btn:hover {
+    filter: brightness(120%); }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  background-color: #353535;
+  margin-top: 0px;
+  color: white;
+  padding: 10px 0px 5px 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700; }
+  .footer__logo {
+    width: 90%;
+    filter: invert(100%);
+    -webkit-filter: invert(100%); }
+    .footer__logo img {
+      object-fit: cover;
+      width: 40%;
+      padding: 20px 0px 10px 5px; }
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 130px;
+    cursor: pointer; }
+  .footer li {
+    display: inline-block;
+    justify-content: space-between; }
+    .footer li:hover {
+      text-decoration: underline; }
+    .footer li i {
+      padding-right: 7px; }
+    .footer li .fa-utensils {
+      padding-right: 12px; }
+    .footer li a {
+      color: white; }
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .header__menu {
+    padding: 0px 180px 0px 0px; }
+    .header__menu i {
+      padding-right: 100px; }
+
+  .food {
+    max-width: 45%;
+    margin: 20px auto 0px auto; }
+    .food:hover .details {
+      width: 60%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .food:hover .check {
+      visibility: visible;
+      position: absolute;
+      margin: -6px 0px 0px 82%;
+      transition: all 1s;
+      animation: slide-check 1s ease both;
+      animation-direction: normal; }
+    .food:hover .check i {
+      animation: spin 0.5s ease-in; }
+    .food:hover h3 {
+      width: 60%; }
+
+  .main_title {
+    padding: 50px 10px 5px 10px;
+    width: 68%;
+    margin: auto; }
+
+  .food_type h2 {
+    margin: 20px 0px 10px 210px;
+    width: 5%; }
+
+  .price {
+    position: absolute;
+    margin: 20px 0px 0px 280px !important;
+    width: 10%;
+    transition: all 10s; }
+
+  .check {
+    margin: -6px -10px 6px 280px;
+    height: 103%;
+    border: hidden; }
+
+  .details {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
+    transition: all 1.5s; }
+
+  .btn {
+    width: 25%;
+    margin: auto; }
+    .btn p {
+      padding: 13px 10px 5px 50px; }
+
+  .footer {
+    padding: 10px 0px 5px 280px; } }
+@media only screen and (min-width: 350px) and (max-width: 760px) {
+  .food {
+    border: 1px solid transparent;
+    border: hidden;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 1px 2px 4px #d3d3d3;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    max-width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 5px 0px 0px 8px;
+    cursor: pointer;
+    position: relative;
+    transform: scale(1); }
+    .food h3 {
+      font-size: 16px;
+      font-weight: 700px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 90%; }
+    .food p {
+      position: relative;
+      font-size: 13px;
+      padding-top: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .food:hover .details {
+      width: 60%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .food:hover .check {
+      visibility: visible;
+      position: absolute;
+      margin: -6px 0px 0px 85%;
+      transition: all 1s;
+      animation: slide-check 1s ease both;
+      animation-direction: normal; }
+
+  .price {
+    position: relative;
+    font-weight: 700;
+    z-index: 1;
+    width: 5%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 250px; }
+
+  .details {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 60%;
+    transition: all 1.5s; }
+
+  .food h3 {
+    font-size: 16px;
+    font-weight: 700px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 65%; }
+  .food:hover h3 {
+    width: 60%; }
+
+  .btn {
+    width: 50%;
+    margin: 20px auto 0px auto; }
+    .btn p {
+      text-align: center;
+      padding: 13px 10px 5px 0px; } }
+@media only screen and (min-width: 992px) and (max-width: 1096px) {
+  .header__menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 25px auto 10px auto;
+    z-index: 2; }
+    .header__menu i {
+      color: black;
+      opacity: 0.8;
+      font-size: 18px;
+      margin-left: -150px; }
+
+  #logo img {
+    display: flex;
+    object-fit: cover;
+    width: 50%;
+    margin: 0px 50px 0px 0px;
+    position: sticky; }
+
+  .food_type h2 {
+    font-size: 16px;
+    margin: 20px 0px 10px 250px;
+    content: "";
+    position: relative;
+    width: 4%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid #98e2cf; }
+
+  .food {
+    max-width: 50%;
+    margin: 20px auto 0px auto;
+    border: 1px solid transparent;
+    border: hidden;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 1px 2px 4px #d3d3d3;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 60px;
+    padding: 5px 0px 0px 8px;
+    cursor: pointer;
+    position: inherit;
+    transform: scale(1); }
+    .food h3 {
+      font-size: 16px;
+      font-weight: 700px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 70%; }
+    .food p {
+      position: relative;
+      font-size: 13px;
+      padding-top: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .food:hover .details {
+      width: 60%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .food:hover .check {
+      visibility: visible;
+      position: absolute;
+      margin: -6px 0px 0px 88%;
+      transition: all 1s;
+      animation: slide-check 1s ease both;
+      animation-direction: normal; }
+
+  .main_title {
+    padding: 20px 10px 5px 15px; }
+
+  .price {
+    position: absolute;
+    font-weight: 700;
+    z-index: 1;
+    width: 5%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 400px !important; }
+
+  .check {
+    margin: -6px 0px 0px 120%;
+    height: 103%;
+    border: hidden; }
+
+  .btn {
+    width: 20%;
+    margin: 20px auto 0px auto; }
+    .btn p {
+      text-align: center;
+      padding: 13px 10px 5px 0px; }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    background-color: #353535;
+    margin-top: 0px;
+    color: white;
+    padding: 10px 0px 5px 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700; }
+    .footer__logo {
+      width: 40%;
+      filter: invert(100%);
+      -webkit-filter: invert(100%); }
+      .footer__logo img {
+        object-fit: cover;
+        width: 40%;
+        padding: 20px 0px 10px 5px; } }
+@media only screen and (min-width: 1097px) and (max-width: 1500px) {
+  .header__menu {
+    height: 80px; }
+
+  .header__menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 25px auto 10px auto;
+    z-index: 2; }
+    .header__menu i {
+      color: black;
+      opacity: 0.8;
+      font-size: 20px;
+      margin-left: -270px; }
+
+  #logo img {
+    display: flex;
+    object-fit: cover;
+    width: 50%;
+    margin: 0px 50px 0px 0px;
+    position: sticky; }
+
+  .main_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Shrikhand, cursive;
+    font-weight: 300;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px 10px 5px 0px;
+    cursor: pointer;
+    padding: 20px 10px 5px 15px; }
+    .main_title i {
+      font-size: 26px; }
+
+  .food_type h2 {
+    font-size: 22px;
+    margin: 20px 0px 10px 360px;
+    content: "";
+    position: relative;
+    width: 4%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid #98e2cf; }
+
+  .food {
+    max-width: 50%;
+    margin: 20px auto 0px auto;
+    border: 1px solid transparent;
+    border: hidden;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 1px 2px 4px #d3d3d3;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 80px;
+    padding: 8px 0px 0px 8px;
+    cursor: pointer;
+    position: inherit;
+    transform: scale(1); }
+    .food h3 {
+      font-size: 20px;
+      font-weight: 700px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 70%; }
+    .food p {
+      position: relative;
+      font-size: 17px;
+      padding-top: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .food:hover .check {
+      margin: -10px 0px 0px 91%; }
+
+  .main_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Shrikhand, cursive;
+    font-weight: 300;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px 10px 5px 0px;
+    cursor: pointer;
+    padding: 20px 10px 5px 15px; }
+    .main_title i {
+      font-size: 26px; }
+
+  .price {
+    position: absolute;
+    font-weight: 700;
+    z-index: 1;
+    width: 5%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 500px !important; }
+
+  .check {
+    margin: -10px 0px 0px 120%;
+    height: 110%;
+    width: 4rem;
+    border: hidden; }
+
+  .btn {
+    width: 20%;
+    margin: 20px auto 0px auto; }
+    .btn p {
+      text-align: center;
+      padding: 13px 10px 5px 0px; }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    background-color: #353535;
+    margin-top: 0px;
+    color: white;
+    padding: 10px 0px 5px 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700; }
+    .footer__logo {
+      width: 40%;
+      filter: invert(100%);
+      -webkit-filter: invert(100%); }
+      .footer__logo img {
+        object-fit: cover;
+        width: 40%;
+        padding: 20px 0px 10px 5px; } }
+@media only screen and (min-width: 1499px) {
+  .header__menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 25px auto 10px auto;
+    z-index: 2; }
+    .header__menu i {
+      color: black;
+      opacity: 0.8;
+      font-size: 20px;
+      margin-left: -270px; }
+
+  #logo img {
+    display: flex;
+    object-fit: cover;
+    width: 50%;
+    margin: 0px 140px 0px 0px;
+    position: sticky; }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+
+  .main_title {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 55px 0px 55px; }
+    .main_title h1 {
+      font-size: 28px;
+      margin: 40px 0px 40px 0px; }
+    .main_title i {
+      margin: 40px 0px 40px 0px; }
+
+  .food:hover .check {
+    visibility: visible;
+    position: absolute;
+    margin: -6px 0px 0px 87%;
+    transition: all 1s;
+    animation: slide-check 1s ease both;
+    animation-direction: normal; }
+
+  .food_type {
+    width: 30%; }
+    .food_type h2 {
+      font-size: 22px;
+      margin: 20px 0px 30px 0px;
+      content: "";
+      position: relative;
+      width: 12%;
+      bottom: 0;
+      left: 0;
+      border-bottom: 3px solid #98e2cf; }
+
+  .price {
+    position: absolute;
+    font-weight: 700;
+    z-index: 1;
+    width: 5%;
+    justify-self: baseline;
+    margin: 20px 0px 0px 380px !important; }
+
+  .btn {
+    width: 15%;
+    margin: 50px auto 20px auto; }
+    .btn p {
+      text-align: center;
+      padding: 13px 10px 5px 0px; }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    background-color: #353535;
+    margin-top: 0px;
+    color: white;
+    padding: 10px 0px 5px 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700; }
+    .footer__logo {
+      width: 40%;
+      filter: invert(100%);
+      -webkit-filter: invert(100%); }
+      .footer__logo img {
+        object-fit: cover;
+        width: 40%;
+        padding: 20px 0px 10px 5px; } }
+@media only screen and (min-width: 2560px) {
+  #block_page {
+    margin: 0px 400px 0px 400px; } }
+
+/*# sourceMappingURL=style_menu_1.css.map */
