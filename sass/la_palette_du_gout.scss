@@ -353,3 +353,18 @@
       @include footer_desktop;
     }
   }
+
+  @media only screen and (min-width: 1499px){
+    .header__menu{
+      @include header_menu_desktop;
+    }
+
+    #logo img{
+      @include logoimg_menu_desktop;
+      }
+
+    .menu{
+      @include menus_desktop;
+    }
+  }
+

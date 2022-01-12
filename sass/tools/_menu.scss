@@ -426,4 +426,9 @@
   }
 }
 
+@mixin menus_desktop{
+  display: flex;
+  flex-direction: row;
+}
+
 
