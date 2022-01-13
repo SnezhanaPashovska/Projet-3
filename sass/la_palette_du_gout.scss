@@ -402,7 +402,18 @@
   @media only screen and (min-width: 2560px){
 
     #block_page{
-		margin: 0px 400px 0px 400px;
+		margin: 0px 450px 0px 450px;
 	}
+
+  .food{
+    &:hover .check{
+      visibility: visible;
+      position: absolute;
+      margin: -6px 0px 0px 89%;
+      transition: all 1s;
+      animation: slide-check 1s ease both;
+      animation-direction: normal;
+    }
+    }
   }
 
