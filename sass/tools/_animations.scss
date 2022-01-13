@@ -33,7 +33,7 @@
 
   100%{
     background: $color-tertiary;
-    transform: translateX();
+    transform: translateX(0px);
   }
 }
 
@@ -55,7 +55,7 @@
 
   100%{
     background: $color-tertiary;
-    transform: translateX();
+    transform: translateX(0px);
   }
 }
 
@@ -112,7 +112,7 @@
 
 @keyframes slide{
   0%{
-    transform: margin-right auto;
+    transform: translateX(0);
   }
 
   100%{
@@ -150,7 +150,7 @@
 
 
   100%{
-    transform: margin-right auto;
+    transform: translateX(0);
   }
 }
 

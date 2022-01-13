@@ -52,8 +52,8 @@
   }
   100% {
     background: #98e2cf;
-    -webkit-transform: translateX();
-            transform: translateX();
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -75,8 +75,8 @@
   }
   100% {
     background: #98e2cf;
-    -webkit-transform: translateX();
-            transform: translateX();
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
@@ -93,13 +93,13 @@
   }
   50% {
     background: #98e2cf;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     background: #98e2cf;
-    -webkit-transform: translateX();
-            transform: translateX();
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -121,8 +121,8 @@
   }
   100% {
     background: #98e2cf;
-    -webkit-transform: translateX();
-            transform: translateX();
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 

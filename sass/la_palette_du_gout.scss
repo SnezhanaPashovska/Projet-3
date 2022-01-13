@@ -42,7 +42,7 @@
   transition: ease-in;
   animation: appear .5s ease-in-out forwards;
   animation-fill-mode: both;
-  transition-timing-function: cubic-bezier(1, 2, 3, 4);
+  transition-timing-function: cubic-bezier(0.1, 0.2, 0.3, 0.4);
   
   @for $i from 0 through 10{
     &:nth-child(#{$i}){
@@ -51,7 +51,7 @@
   }
   &:hover{
     padding-right: 3.5rem;
-    overflow: x;
+    overflow: hidden;
     text-overflow: ellipsis;
     
   }

@@ -27,7 +27,7 @@
   }
   100% {
     background: #98e2cf;
-    transform: translateX();
+    transform: translateX(0px);
   }
 }
 @keyframes slideright {
@@ -45,7 +45,7 @@
   }
   100% {
     background: #98e2cf;
-    transform: translateX();
+    transform: translateX(0px);
   }
 }
 @keyframes preloader {
@@ -90,7 +90,7 @@
 }
 @keyframes slide {
   0% {
-    transform: margin-right auto;
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-3rem);
@@ -117,7 +117,7 @@
     transform: translateX(-3rem);
   }
   100% {
-    transform: margin-right auto;
+    transform: translateX(0);
   }
 }
 .header__menu {
@@ -225,11 +225,11 @@
   transition: ease-in;
   animation: appear 0.5s ease-in-out forwards;
   animation-fill-mode: both;
-  transition-timing-function: cubic-bezier(1, 2, 3, 4);
+  transition-timing-function: cubic-bezier(0.1, 0.2, 0.3, 0.4);
 }
 .food h3 {
   font-size: 16px;
-  font-weight: 700px;
+  font-weight: 700;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -278,7 +278,7 @@
 }
 .food:hover {
   padding-right: 3.5rem;
-  overflow: x;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .food:hover .price {
@@ -352,7 +352,7 @@
   animation-fill-mode: forwards;
 }
 .check i {
-  padding: 6px auto 0px auto;
+  padding: 6px 0px 6px 0px;
 }
 
 .food_type {
@@ -566,7 +566,7 @@
   }
   .food h3 {
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -614,7 +614,7 @@
 
   .food h3 {
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -690,7 +690,7 @@
   }
   .food h3 {
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -846,7 +846,7 @@
   }
   .food h3 {
     font-size: 20px;
-    font-weight: 700px;
+    font-weight: 700;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
