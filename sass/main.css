@@ -1,4 +1,4 @@
-@-webkit-keyframes rotate {
+@keyframes rotate {
   0% {
     background: #9356DC;
     -webkit-transform: rotate(0deg);
@@ -34,7 +34,7 @@
   }
 }
 
-@-webkit-keyframes slideleft {
+@keyframes slideleft {
   0% {
     background: #FF79DA;
     -webkit-transform: translateX(0px);
@@ -80,7 +80,7 @@
   }
 }
 
-@-webkit-keyframes slideright {
+@keyframes slideright {
   0% {
     background: #FF79DA;
     -webkit-transform: translateX(0px);
@@ -126,7 +126,7 @@
   }
 }
 
-@-webkit-keyframes preloader {
+@keyframes preloader {
   0% {
     background-color: white;
     opacity: 1;
@@ -498,7 +498,6 @@
   font-weight: 900;
   background-image: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-transition: all 10ms;
   transition: all 10ms;
